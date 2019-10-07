@@ -1,28 +1,27 @@
 {
-  "name": "windows-notification-state",
+  "name": "@aabuhijleh/windows-notification-state",
   "version": "1.3.3",
   "description": "SHQueryUserNotificationState as a native Node addon",
   "main": "lib/index.js",
   "scripts": {
-    "test": "standard && mocha ./test/test.js"
+    "test": "standard && mocha ./test/test.js",
+    "install": "node-gyp rebuild"
   },
-  "repository": "https://github.com/felixrieseberg/windows-notification-state",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aabuhijleh/windows-notification-state.git"
+  },
   "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/felixrieseberg/windows-notification-state/blob/master/LICENSE"
+      "url": "http://github.com/aabuhijleh/windows-notification-state/blob/master/LICENSE"
     }
   ],
   "dependencies": {
-    "bindings": "^1.5.0",
     "nan": "^2.14.0"
   },
-  "author": {
-    "email": "felix@felixrieseberg.com",
-    "name": "Felix Rieseberg",
-    "url": "http://www.felixrieseberg.com"
-  },
+  "author": "Felix Rieseberg <felix@felixrieseberg.com> (http://www.felixrieseberg.com)",
   "keywords": [
     "windows",
     "SHQueryUserNotificationState",
@@ -31,5 +30,14 @@
   "devDependencies": {
     "mocha": "^3.2.0",
     "standard": "^9.0.1"
+  },
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/aabuhijleh/windows-notification-state/issues"
+  },
+  "homepage": "https://github.com/aabuhijleh/windows-notification-state#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }

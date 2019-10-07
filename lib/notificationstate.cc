@@ -12,11 +12,7 @@ NAN_METHOD(GetNotificationState) {
   Isolate* isolate = Isolate::GetCurrent();
   HandleScope scope(isolate);
   int returnValue = -1;
-
-  #ifdef TARGET_OS_MAC
-    returnValue = queryUserNotificationState();
-  #endif
-
+  returnValue = queryUserNotificationState();
   info.GetReturnValue().Set(Int32::New(isolate, returnValue));
 }
 
